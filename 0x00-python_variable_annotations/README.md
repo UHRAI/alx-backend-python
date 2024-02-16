@@ -1,44 +1,44 @@
-0x00. Python - Variable Annotations
-Python Back-end
+# `0x00. Python - Variable Annotations`
+*Python Back-end*
 
-Concepts
+## Concepts:
 For this project, we expect you to look at this concept:
 
-Advanced Python(page down)
+- Advanced Python(page down)
 
-Resources
+# Resources
 Read or watch:
 
-Python 3 typing documentation(https://docs.python.org/3/library/typing.html)
-MyPy cheat sheet(https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html)
+- Python 3 typing documentation(https://docs.python.org/3/library/typing.html)
+- MyPy cheat sheet(https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html)
 
-Learning Objectives
-General
+# Learning Objectives
+## General
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-Type annotations in Python 3
-How you can use type annotations to specify function signatures and variable types
-Duck typing
-How to validate your code with mypy
-Requirements
-General
-Allowed editors: vi, vim, emacs
-All your files will be interpreted/compiled on Ubuntu 18.04 LTS using python3 (version 3.7)
-All your files should end with a new line
-The first line of all your files should be exactly #!/usr/bin/env python3
-A README.md file, at the root of the folder of the project, is mandatory
-Your code should use the pycodestyle style (version 2.5.)
-All your files must be executable
-The length of your files will be tested using wc
-All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
-All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
-All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
-A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
-Tasks
+- Type annotations in Python 3
+- How you can use type annotations to specify function signatures and variable types
+- Duck typing
+- How to validate your code with `mypy`
+# Requirements
+## General
+- Allowed editors: `vi`, `vim`, `emacs`
+- All your files will be interpreted/compiled on Ubuntu 18.04 LTS using `python3` (version 3.7)
+- All your files should end with a new line
+- The first line of all your files should be exactly `#!/usr/bin/env python3`
+- A `README.md` file, at the root of the folder of the project, is mandatory
+- Your code should use the `pycodestyle` style (version 2.5.)
+- All your files must be executable
+- The length of your files will be tested using `wc`
+- All your modules should have a documentation (`python3 -c 'print(__import__("my_module").__doc__)'`)
+- All your classes should have a documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`)
+- All your functions (inside and outside a class) should have a documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)'` and `python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`)
+- A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+# Tasks
 0. Basic annotations - add
-mandatory
-Write a type-annotated function add that takes a float a and a float b as arguments and returns their sum as a float.
-
+`mandatory`
+Write a type-annotated function `add` that takes a float `a` and a float `b` as arguments and returns their sum as a float.
+```
 bob@dylan:~$ cat 0-main.py
 #!/usr/bin/env python3
 add = __import__('0-add').add
@@ -49,16 +49,17 @@ print(add.__annotations__)
 bob@dylan:~$ ./0-main.py
 True
 {'a':  <class 'float'>, 'b': <class 'float'>, 'return': <class 'float'>}
-Repo:
+```
+**Repo:**
 
-GitHub repository: alx-backend-python
-Directory: 0x00-python_variable_annotations
-File: 0-add.py
+- GitHub repository: alx-backend-python
+- Directory: 0x00-python_variable_annotations
+- File: 0-add.py
    
 1. Basic annotations - concat
-mandatory
-Write a type-annotated function concat that takes a string str1 and a string str2 as arguments and returns a concatenated string
-
+`mandatory`
+Write a type-annotated function `concat` that takes a string `str1` and a string `str2` as arguments and returns a concatenated string
+```
 bob@dylan:~$ cat 1-main.py
 #!/usr/bin/env python3
 concat = __import__('1-concat').concat
@@ -72,7 +73,8 @@ print(concat.__annotations__)
 bob@dylan:~$ ./1-main.py
 True
 {'str1': <class 'str'>, 'str2': <class 'str'>, 'return': <class 'str'>}
-Repo:
+```
+**Repo:**
 
 GitHub repository: alx-backend-python
 Directory: 0x00-python_variable_annotations
@@ -81,7 +83,7 @@ File: 1-concat.py
 2. Basic annotations - floor
 mandatory
 Write a type-annotated function floor which takes a float n as argument and returns the floor of the float.
-
+```
 bob@dylan:~$ cat 2-main.py
 #!/usr/bin/env python3
 
@@ -99,7 +101,8 @@ bob@dylan:~$ ./2-main.py
 True
 {'n': <class 'float'>, 'return': <class 'int'>}
 floor(3.14) returns 3, which is a <class 'int'>
-Repo:
+```
+**Repo:**
 
 GitHub repository: alx-backend-python
 Directory: 0x00-python_variable_annotations
@@ -108,7 +111,7 @@ File: 2-floor.py
 3. Basic annotations - to string
 mandatory
 Write a type-annotated function to_str that takes a float n as argument and returns the string representation of the float.
-
+```
 bob@dylan:~$ cat 3-main.py
 #!/usr/bin/env python3
 to_str = __import__('3-to_str').to_str
@@ -122,6 +125,7 @@ bob@dylan:~$ ./3-main.py
 True
 {'n': <class 'float'>, 'return': <class 'str'>}
 to_str(3.14) returns 3.14, which is a <class 'str'>
+```
 Repo:
 
 GitHub repository: alx-backend-python
@@ -136,6 +140,7 @@ a, an integer with a value of 1
 pi, a float with a value of 3.14
 i_understand_annotations, a boolean with a value of True
 school, a string with a value of “Holberton”
+```
 bob@dylan:~$ cat 4-main.py
 #!/usr/bin/env python3
 
@@ -154,6 +159,7 @@ a is a <class 'int'> with a value of 1
 pi is a <class 'float'> with a value of 3.14
 i_understand_annotations is a <class 'bool'> with a value of True
 school is a <class 'str'> with a value of Holberton
+```
 Repo:
 
 GitHub repository: alx-backend-python
@@ -163,7 +169,7 @@ File: 4-define_variables.py
 5. Complex types - list of floats
 mandatory
 Write a type-annotated function sum_list which takes a list input_list of floats as argument and returns their sum as a float.
-
+```
 bob@dylan:~$ cat 5-main.py
 #!/usr/bin/env python3
 
@@ -179,6 +185,7 @@ bob@dylan:~$ ./5-main.py
 True
 {'input_list': typing.List[float], 'return': <class 'float'>}
 sum_list(floats) returns 6.470000000000001 which is a <class 'float'>
+```
 Repo:
 
 GitHub repository: alx-backend-python
@@ -188,7 +195,7 @@ File: 5-sum_list.py
 6. Complex types - mixed list
 mandatory
 Write a type-annotated function sum_mixed_list which takes a list mxd_lst of integers and floats and returns their sum as a float.
-
+```
 bob@dylan:~$ cat 6-main.py
 #!/usr/bin/env python3
 
@@ -204,6 +211,7 @@ bob@dylan:~$ ./6-main.py
 {'mxd_lst': typing.List[typing.Union[int, float]], 'return': <class 'float'>}
 True
 sum_mixed_list(mixed) returns 679.13 which is a <class 'float'>
+```
 Repo:
 
 GitHub repository: alx-backend-python
@@ -213,7 +221,7 @@ File: 6-sum_mixed_list.py
 7. Complex types - string and int/float to tuple
 mandatory
 Write a type-annotated function to_kv that takes a string k and an int OR float v as arguments and returns a tuple. The first element of the tuple is the string k. The second element is the square of the int/float v and should be annotated as a float.
-
+```
 bob@dylan:~$ cat 7-main.py
 #!/usr/bin/env python3
 
@@ -227,6 +235,7 @@ bob@dylan:~$ ./7-main.py
 {'k': <class 'str'>, 'v': typing.Union[int, float], 'return': typing.Tuple[str, float]}
 ('eggs', 9)
 ('school', 0.0004)
+```
 Repo:
 
 GitHub repository: alx-backend-python
@@ -236,7 +245,7 @@ File: 7-to_kv.py
 8. Complex types - functions
 mandatory
 Write a type-annotated function make_multiplier that takes a float multiplier as argument and returns a function that multiplies a float by multiplier.
-
+```
 bob@dylan:~$ cat 8-main.py
 #!/usr/bin/env python3
 
@@ -248,6 +257,7 @@ print("{}".format(fun(2.22)))
 bob@dylan:~$ ./8-main.py
 {'multiplier': <class 'float'>, 'return': typing.Callable[[float], float]}
 4.928400000000001
+```
 Repo:
 
 GitHub repository: alx-backend-python
@@ -257,9 +267,11 @@ File: 8-make_multiplier.py
 9. Let's duck type an iterable object
 mandatory
 Annotate the below function’s parameters and return values with the appropriate types
-
+```
 def element_length(lst):
     return [(i, len(i)) for i in lst]
+```
+```
 bob@dylan:~$ cat 9-main.py 
 #!/usr/bin/env python3
 
@@ -269,6 +281,7 @@ print(element_length.__annotations__)
 
 bob@dylan:~$ ./9-main.py 
 {'lst': typing.Iterable[typing.Sequence], 'return': typing.List[typing.Tuple[typing.Sequence, int]]}
+```
 Repo:
 
 GitHub repository: alx-backend-python
@@ -280,11 +293,15 @@ File: 9-element_length.py
 Augment the following code with the correct duck-typed annotations:
 
 # The types of the elements of the input are not know
+```
 def safe_first_element(lst):
     if lst:
         return lst[0]
     else:
         return None
+
+```
+```
 bob@dylan:~$ cat 100-main.py 
 #!/usr/bin/env python3
 
@@ -294,6 +311,7 @@ print(safe_first_element.__annotations__)
 
 bob@dylan:~$ ./100-main.py 
 {'lst': typing.Sequence[typing.Any], 'return': typing.Union[typing.Any, NoneType]}
+```
 Repo:
 
 GitHub repository: alx-backend-python
@@ -305,12 +323,14 @@ File: 100-safe_first_element.py
 Given the parameters and the return values, add type annotations to the function
 
 Hint: look into TypeVar
-
+```
 def safely_get_value(dct, key, default = None):
     if key in dct:
         return dct[key]
     else:
         return default
+```
+```
 bob@dylan:~$ cat 101-main.py 
 #!/usr/bin/env python3
 
@@ -327,6 +347,7 @@ dct: typing.Mapping
 key: typing.Any
 default: typing.Union[~T, NoneType]
 return: typing.Union[typing.Any, ~T]
+```
 Repo:
 
 GitHub repository: alx-backend-python
@@ -336,7 +357,7 @@ File: 101-safely_get_value.py
 12. Type Checking
 #advanced
 Use mypy to validate the following piece of code and apply any necessary changes.
-
+```
 def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
     zoomed_in: Tuple = [
         item for item in lst
@@ -352,6 +373,8 @@ zoom_2x = zoom_array(array)
 zoom_3x = zoom_array(array, 3.0)
 bob@dylan:~$ mypy 102-type_checking.py
 Success: no issues found in 1 source file
+```
+```
 bob@dylan:~$ cat 102-main.py 
 #!/usr/bin/env python3
 
@@ -361,6 +384,7 @@ print(zoom_array.__annotations__)
 
 bob@dylan:~$ ./102-main.py 
 {'lst': typing.Tuple, 'factor': <class 'int'>, 'return': typing.List}
+```
 Repo:
 
 GitHub repository: alx-backend-python
