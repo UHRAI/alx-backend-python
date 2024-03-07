@@ -117,19 +117,19 @@ Test that the output of `get_json` is equal to `test_payload`.
 
 Repo:
 
-GitHub repository: alx-backend-python
-Directory: 0x03-Unittests_and_integration_tests
-File: test_utils.py
+- GitHub repository: alx-backend-python
+- Directory: 0x03-Unittests_and_integration_tests
+- File: test_utils.py
   
 3. Parameterize and patch
 `mandatory`
 
-Read about memoization and familiarize yourself with the utils.memoize decorator.
+Read about memoization and familiarize yourself with the `utils.memoize` decorator.
 
-Implement the TestMemoize(unittest.TestCase) class with a test_memoize method.
+Implement the `TestMemoize(unittest.TestCase)` class with a `test_memoize` method.
 
-Inside test_memoize, define following class
-
+Inside `test_memoize`, define following class
+```
 class TestClass:
 
     def a_method(self):
@@ -138,38 +138,41 @@ class TestClass:
     @memoize
     def a_property(self):
         return self.a_method()
-Use unittest.mock.patch to mock a_method. Test that when calling a_property twice, the correct result is returned but a_method is only called once using assert_called_once.
+```
+Use `unittest.mock.patch` to mock `a_method`. Test that when calling `a_property` twice, the correct result is returned but `a_method` is only called once using `assert_called_once`.
 
 Repo:
 
-GitHub repository: alx-backend-python
-Directory: 0x03-Unittests_and_integration_tests
-File: test_utils.py
+- GitHub repository: alx-backend-python
+- Directory: 0x03-Unittests_and_integration_tests
+- File: test_utils.py
   
 4. Parameterize and patch as decorators
-mandatory
-Familiarize yourself with the client.GithubOrgClient class.
+`mandatory`
 
-In a new test_client.py file, declare the TestGithubOrgClient(unittest.TestCase) class and implement the test_org method.
+Familiarize yourself with the `client.GithubOrgClient` class.
 
-This method should test that GithubOrgClient.org returns the correct value.
+In a new `test_client.py` file, declare the `TestGithubOrgClient(unittest.TestCase)` class and implement the `test_org` method.
 
-Use @patch as a decorator to make sure get_json is called once with the expected argument but make sure it is not executed.
+This method should test that `GithubOrgClient.org` returns the correct value.
 
-Use @parameterized.expand as a decorator to parametrize the test with a couple of org examples to pass to GithubOrgClient, in this order:
+Use `@patch` as a decorator to make sure `get_json` is called once with the expected argument but make sure it is not executed.
 
-google
-abc
+Use `@parameterized.expand` as a decorator to parametrize the test with a couple of `org` examples to pass to `GithubOrgClient`, in this order:
+
+	- `google`
+	- `abc`
 Of course, no external HTTP calls should be made.
 
 Repo:
 
-GitHub repository: alx-backend-python
-Directory: 0x03-Unittests_and_integration_tests
-File: test_client.py
+- GitHub repository: alx-backend-python
+- Directory: 0x03-Unittests_and_integration_tests
+- File: test_client.py
   
 5. Mocking a property
-mandatory
+`mandatory`
+
 memoize turns methods into properties. Read up on how to mock a property (see resource).
 
 Implement the test_public_repos_url method to unit-test GithubOrgClient._public_repos_url.
