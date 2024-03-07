@@ -1,6 +1,6 @@
-*Toggle navigation
-Curriculum
-Short Specializations
+*Toggle navigation,
+Curriculum,
+Short Specializations,
 Average: 150.98%*
 
 # `0x03. Unittests and Integration Tests`
