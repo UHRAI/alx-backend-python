@@ -1,16 +1,10 @@
-Toggle navigation
+*Toggle navigation
 Curriculum
 Short Specializations
-Average: 150.98%
-0x03. Unittests and Integration Tests
-UnitTests
-Back-end
-Integration tests
- By: Emmanuel Turlay, Staff Software Engineer at Cruise
- Weight: 1
- Project will start Mar 7, 2024 4:00 AM, must end by Mar 12, 2024 4:00 AM
- Checker will be released at Mar 8, 2024 10:00 AM
- An auto review will be launched at the deadline
+Average: 150.98%*
+
+# `0x03. Unittests and Integration Tests`
+`UnitTests`&`Back-end`&`Integration tests`
 
 
 Unit testing is the process of testing that a particular function returns expected results for different set of inputs. A unit test is supposed to test standard inputs and corner cases. A unit test should only test the logic defined inside the tested function. Most calls to additional functions should be mocked, especially if they make network or database calls.
@@ -22,17 +16,18 @@ Integration tests aim to test a code path end-to-end. In general, only low level
 Integration tests will test interactions between every part of your code.
 
 Execute your tests with
-
+```
 $ python -m unittest path/to/test_file.py
-Resources
-Read or watch:
+```
+# Resources
+## Read or watch:
 
-unittest — Unit testing framework
-unittest.mock — mock object library
-How to mock a readonly property with mock?
-parameterized
-Memoization
-Learning Objectives
+	- unittest — Unit testing framework
+	- unittest.mock — mock object library
+	- How to mock a readonly property with mock?
+	- parameterized
+	- Memoization
+# Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
 The difference between unit and integration tests.
