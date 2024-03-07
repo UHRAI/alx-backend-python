@@ -33,7 +33,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 	- The difference between unit and integration tests.
 	- Common testing patterns such as mocking, parametrizations and fixtures
- 
+   
 # Requirements
 	- All your files will be interpreted/compiled on Ubuntu 18.04 LTS using `python3` (version 3.7)
 	- All your files should end with a new line
